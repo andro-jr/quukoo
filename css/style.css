@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ae529b;
+  --primary-dark: #5a2e54;
+  --black-100: #221d21;
+  --black-75: rgba(34, 29, 33, 0.75);
+  --blavk-50: rgba(34, 29, 33, 0.5);
+  --v-light-gray: #f7f7f7;
+  --text-light: #666666;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--v-light-gray);
+}
+
+/* header */
+a {
+  text-decoration: none;
+}
+nav {
+  width: 84%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.05);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 1000;
+  background-color: white;
+}
+.search_bar {
+  background-color: var(--primary-color);
+  width: 30rem;
+  height: 3.5rem;
+  border-radius: 5px;
+  border: 2px;
+}
+.search_bar form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.search_bar form input {
+  background: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: white;
+}
+.search_bar form input::placeholder {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: white;
+}
+.search_bar form button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  padding: 0 1.5rem;
+}
+
+.user_btn iconify-icon {
+  margin: 3rem;
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+/* dashboard */
+
+.dashboard {
+  width: 16%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  background-color: white;
+}
+.logo_box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.logo_text {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 4.4rem;
+  color: var(--primary-color);
+}
+.dashboad_contents {
+  display: flex;
+  padding-left: 3rem;
+  align-items: center;
+  height: 6rem;
+  position: relative;
+  cursor: pointer;
+}
+.dashboad_contents .dashboard_heading {
+  font-family: "Nunito";
+  margin-left: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: var(--black-75);
+}
+.dash_icon iconify-icon {
+  color: var(--black-75);
+  font-size: 2.5rem;
+}
+.dashboad_contents .fas {
+  color: var(--black-75);
+  position: absolute;
+  right: 2rem;
+  font-size: 1.2rem;
+  transition: all 0.5s;
+}
+.dash_items {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.dash_items a {
+  display: block;
+  color: var(--blavk-50);
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  padding: 8px 0;
+  padding-left: 6.5rem;
+  transition: all 0.1s;
+}
+.dash_items a:hover {
+  color: var(--primary-color);
+}
+
+.open .fas {
+  rotate: -180deg;
+}
+.dash_items .active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+/* main content */
+
+#main_content {
+  margin-left: 15%;
+  margin-top: 5rem;
+  padding: 20px;
+  /* border: 2px solid red; */
+}
+.wrapper {
+  margin: 20px;
+}
+.main_heading {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 4rem;
+  color: var(--primary-color);
+  position: relative;
+  margin-left: 1.2rem;
+  margin-bottom: 3rem;
+}
+.main_heading::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -12px;
+  width: 5px;
+  height: 60%;
+  background: var(--primary-color);
+}
+
+.container {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.container_box {
+  min-width: 450px;
+  max-width: 38%;
+  margin-right: 3rem;
+  margin-bottom: 20px;
+  /* min-width: 100px; */
+}
+.container_box .box_title {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: var(--black-100);
+}
+.container_box .box_contents .content_row {
+  background-color: white;
+  align-items: center;
+  display: flex;
+  /* justify-content: space-between; */
+  padding: 1.5rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+.content_row .content_head {
+  color: var(--text-light);
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  min-width: 20rem;
+}
+.content_row .content_value {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 22px;
+  color: var(--black-100);
+}
+.content_value img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+.description_row {
+  flex-direction: column;
+}
+.description_row .content_head {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 5rem;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  /* identical to box height */
+
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+.btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* dashboard link hover effect */
+.main_dash_link:hover .dashboard_heading,
+.main_dash_link:hover .dash_icon iconify-icon {
+  color: #ae529b;
+}
